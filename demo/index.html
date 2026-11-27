@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Resize a picture for social media without cropping — With Nate</title>
+    <link rel="stylesheet" href="demo.css" />
+    <link rel="stylesheet" href="../dist/social-resize.css" />
+  </head>
+  <body>
+    <main class="wrap">
+      <p class="eyebrow">Free tool</p>
+      <h1>Resize for social media without cropping</h1>
+      <p class="lede">One picture in, every platform size out, with the whole picture kept. Nothing is uploaded.</p>
+      <div class="sr" data-sr>
+        <div class="sr-drop" data-sr-drop>
+          <p><strong>Drop a picture here</strong></p>
+          <label class="sr-file-label">
+            Choose a file
+            <input type="file" accept="image/*" />
+          </label>
+          <p class="sr-drop-hint">Or paste one from your clipboard. It never leaves this page.</p>
+        </div>
+
+        <p class="sr-status" data-sr-status hidden></p>
+
+        <div class="sr-controls" data-sr-controls hidden>
+          <div class="sr-presets" data-sr-presets></div>
+          <div class="sr-options">
+            <label class="sr-field">
+              <span>Fit</span>
+              <select data-sr-fit>
+                <option value="contain">Whole picture, nothing cropped</option>
+                <option value="cover">Fill the space, crop the edges</option>
+              </select>
+            </label>
+            <label class="sr-field">
+              <span>Around the picture</span>
+              <select data-sr-bg>
+                <option value="blur">A blurred copy of it</option>
+                <option value="colour">A plain colour</option>
+              </select>
+            </label>
+            <label class="sr-field">
+              <span>Colour</span>
+              <input type="color" value="#ffffff" data-sr-colour />
+            </label>
+          </div>
+          <button type="button" class="sr-reset" data-sr-reset hidden>Use a different picture</button>
+        </div>
+
+        <div class="sr-results" data-sr-results></div>
+      </div>
+    </main>
+    <script src="../dist/social-resize.js" defer></script>
+  </body>
+</html>

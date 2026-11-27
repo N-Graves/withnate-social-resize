@@ -1,0 +1,47 @@
+{
+  "name": "withnate-social-resize",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Resize one picture for every social platform at once, without cropping it. Runs entirely in the browser.",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "vitest run",
+    "lint": "tsc --noEmit",
+    "smoke": "npm run build && node scripts/smoke.mjs",
+    "demo": "npm run build && node scripts/serve.mjs",
+    "prove": "node scripts/prove-guards.mjs"
+  },
+  "dependencies": {
+    "@nasdigitaluk/withnate-tool-core": "^0.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "esbuild": "^0.24.0",
+    "typescript": "^5.7.0",
+    "vitest": "^3.0.0"
+  },
+  "author": "Nathan Graves",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/N-Graves/withnate-social-resize.git"
+  },
+  "bugs": {
+    "url": "https://github.com/N-Graves/withnate-social-resize/issues"
+  },
+  "homepage": "https://github.com/N-Graves/withnate-social-resize#readme",
+  "keywords": [
+    "social-media",
+    "resize",
+    "instagram",
+    "no-crop",
+    "browser",
+    "client-side",
+    "privacy",
+    "withnate"
+  ]
+}
