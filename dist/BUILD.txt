@@ -1,6 +1,6 @@
 withnate-social-resize v0.1.0
 js   29547 bytes
-css  2578 bytes
+css  2658 bytes
 
 Drop both into the site's assets directory and reference them from the
 page. The script is a plain IIFE - no module, no defer requirement beyond
