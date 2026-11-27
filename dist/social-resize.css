@@ -1,0 +1,141 @@
+/*! withnate-social-resize v0.1.0 - MIT
+ * https://github.com/N-Graves/withnate-social-resize#readme
+ * Runs entirely in the browser. No network requests, no storage.
+ */
+/* src/style.css */
+.sr {
+  --sr-line: rgba(51, 23, 11, 0.14);
+  --sr-good: #2f6b52;
+  --sr-warn: #d08a1c;
+  --sr-bad: #832305;
+  display: grid;
+  gap: 1.25rem;
+}
+.sr-drop {
+  display: grid;
+  gap: 0.6rem;
+  justify-items: center;
+  padding: clamp(1.5rem, 6vw, 3rem);
+  border: 2px dashed var(--sr-line);
+  border-radius: 14px;
+  text-align: center;
+}
+.sr-drop.is-dragging {
+  border-color: var(--sr-good);
+  background: rgba(47, 107, 82, 0.06);
+}
+.sr-drop-hint {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.72;
+}
+.sr-file-label {
+  display: inline-block;
+  padding: 0.55rem 1.1rem;
+  border: 1px solid var(--sr-line);
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 0.92rem;
+}
+.sr-file-label input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+.sr-status {
+  margin: 0;
+}
+.sr-status.is-error {
+  padding-left: 0.5rem;
+  border-left: 3px solid var(--sr-bad);
+}
+.sr-controls {
+  display: grid;
+  gap: 1rem;
+}
+.sr-presets {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr));
+}
+.sr-group {
+  margin: 0;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid var(--sr-line);
+  border-radius: 10px;
+}
+.sr-group legend {
+  font-weight: 600;
+  padding: 0 0.3rem;
+}
+.sr-preset {
+  display: block;
+  padding: 0.15rem 0;
+  font-size: 0.92rem;
+  cursor: pointer;
+}
+.sr-dims {
+  opacity: 0.7;
+  font-size: 0.85rem;
+}
+.sr-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.sr-field {
+  display: grid;
+  gap: 0.3rem;
+  font-size: 0.92rem;
+}
+.sr-field[hidden] {
+  display: none;
+}
+.sr-results {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 14rem), 1fr));
+  align-items: start;
+}
+.sr-card {
+  margin: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+.sr-card img {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--sr-line);
+  border-radius: 6px;
+  background: repeating-conic-gradient(rgba(0, 0, 0, 0.05) 0 25%, transparent 0 50%) 0 0 / 16px 16px;
+}
+.sr-card figcaption {
+  display: grid;
+  gap: 0.25rem;
+  font-size: 0.9rem;
+}
+.sr-warn {
+  margin: 0;
+  padding-left: 0.5rem;
+  border-left: 3px solid var(--sr-warn);
+  font-size: 0.85rem;
+}
+.sr-note {
+  margin: 0;
+  opacity: 0.8;
+}
+.sr-download,
+.sr-reset {
+  justify-self: start;
+  padding: 0.4rem 0.9rem;
+  border: 1px solid var(--sr-line);
+  border-radius: 999px;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
